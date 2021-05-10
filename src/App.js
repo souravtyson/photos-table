@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import "./style.css";
+import React, { useState, useEffect } from 'react';
+import './style.css';
 
 export default function App() {
   const [startIndex, setStartIndex] = useState(0);
@@ -14,7 +14,7 @@ export default function App() {
       .then(data => {
         console.log(data);
         setPhotos(data);
-        console.log(photos)
+        console.log(photos);
       })
       .catch(error => console.log(error));
   };
@@ -27,7 +27,7 @@ export default function App() {
   }, [startIndex]);
 
   const prevNextButton = e => {
-    if (e.target.innerHTML == "Prev") {
+    if (e.target.innerHTML == 'Prev') {
       setStartIndex(prevState => prevState - 5);
     } else {
       setStartIndex(prevState => prevState + 5);
